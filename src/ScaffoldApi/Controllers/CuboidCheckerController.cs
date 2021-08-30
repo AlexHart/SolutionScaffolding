@@ -17,11 +17,11 @@ namespace ScaffoldApi.Controllers
 		}
 
 		[HttpGet("cuboids-intersect")]
-		public ActionResult<bool> CuboidsIntersect([FromBodyAttribute]Cuboid cuboid1, [FromBodyAttribute]Cuboid cuboid2)  => 
+		public ActionResult<bool> CuboidsIntersect([FromQueryAttribute]Cuboid cuboid1, [FromQueryAttribute]Cuboid cuboid2)  => 
 			_cuboidIntersectionService.CuboidsIntersect(cuboid1, cuboid2);
 
 		[HttpGet("cuboids-intersection")]
-		public ActionResult<CuboidIntersectionResult> CuboidsIntersection([FromBodyAttribute]Cuboid cuboid1, [FromBodyAttribute]Cuboid cuboid2)  => 
+		public ActionResult<CuboidIntersectionResult> CuboidsIntersection([FromQueryAttribute]Cuboid cuboid1, [FromQueryAttribute]Cuboid cuboid2)  => 
 			_cuboidIntersectionService.CuboidIntersectionVolume(cuboid1, cuboid2);
 	}
 

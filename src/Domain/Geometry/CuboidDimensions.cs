@@ -1,7 +1,7 @@
 using System;
 namespace Domain.Geometry
 {
-    public struct CuboidDimensions
+    public class CuboidDimensions
     {
         private const string TooLowError = " can't be less or equal to 0";
         
