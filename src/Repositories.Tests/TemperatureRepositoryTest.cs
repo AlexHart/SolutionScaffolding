@@ -4,9 +4,9 @@ namespace Repositories.Tests
 {
     public class TemperatureRepositoryTest
     {
-        [Fact]
-        public void Test1()
-        {
-        }
+        // [Fact]
+        // public void Test1()
+        // {
+        // }
     }
 }

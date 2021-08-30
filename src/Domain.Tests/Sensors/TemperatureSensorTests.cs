@@ -1,8 +1,7 @@
 using System;
 using Domain.Sensors.Shared;
 using Xunit;
-
-namespace Domain.Tests
+namespace Domain.Tests.Sensors
 {
     public class SensorIdTests
     {

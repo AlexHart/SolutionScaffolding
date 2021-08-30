@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Repositories.Sensors.Temperature;
+using Services.Geometry;
 using Services.Sensors.Temperature;
 
 namespace ScaffoldApi
@@ -36,6 +30,8 @@ namespace ScaffoldApi
 
             services.AddTransient<ITemperatureService, TemperatureService>();
             services.AddTransient<ITemperatureRepository, FakeDataTemperatureRepository>();
+
+            services.AddTransient<ICuboidIntersectionService, CuboidIntersectionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
